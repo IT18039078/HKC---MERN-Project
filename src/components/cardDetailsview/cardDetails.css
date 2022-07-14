@@ -1,0 +1,10 @@
+.detailsImge{
+    height: 80px;
+    width: 80px;
+    border: black;
+}
+
+.detailsBigImge{
+    height: 300px;
+    width: 300px;
+}

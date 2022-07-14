@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
+import Home from './pages/Home';
+import SignIn from './pages/SignIn';
+import Registration from './pages/Registration';
+import Personlize from './pages/Personalize';
+import CardDetailsMain from './pages/CardDetailsMain';
+import LHome from './pages/LHome';
+import Personalize from './pages/Personalize';
+import CardDesign from './pages/CardDesign';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* setting routes to page navigations */}
+      <Routes>
+                  <Route path='/' exact element={<Home/>}/>
+                  <Route path='SignIn'  element={<SignIn/>}/>
+                  <Route path='Registration'  element={<Registration/>}/>
+                  <Route path='CardDetailsMain' element={<CardDetailsMain/>}/>
+                  <Route path='CardDesign' element={<CardDesign/>}/>
+                  <Route path='LHome' element={<LHome/>}/>
+                  <Route path='Personalize' element={<Personalize/>}/>
+      </Routes>
     </div>
   );
 }
